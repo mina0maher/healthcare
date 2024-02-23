@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">health care</string>
+    <string name="welcome_back">مرحبا بك!</string>
+    <string name="login_to_continue">تسجيل الدخول</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sing_up">Sing Up</string>
+    <string name="name">Name</string>
+    <string name="exit">Exit</string>
+    <string name="successfully_booked">Successfully booked</string>
+    <string name="we_will_contact_you_soon">We will <b>contact</b> you soon.\n\nkindly note we will <b>contact</b> with you in the <b><i>next hours.</i></b>\n\nif the payment <b>isn\'t</b> made within <b><i>two days</i></b> it will be <b>cancelled</b>.\n\n<b>Do you want to <i>Contact Us</i> first?</b></string>
+    <string name="dismiss">Dismiss</string>
+    <string name="welcome_mina">مرحبا مينا !</string>
+    <string name="lang">English</string>
+    <string name="clinics">العيادات</string>
+    <string name="blood_donation">تبرع بالدم</string>
+    <string name="blood_transfusion">نقل الدم</string>
+    <string name="choose_service_you_want">اختر ماذا تريد</string>
+</resources>
