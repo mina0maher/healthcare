@@ -8,6 +8,7 @@
         android:layout_width="@dimen/_35sdp"
         android:layout_height="@dimen/_35sdp"
         android:scaleType="centerCrop"
+        android:src="@drawable/logo3"
         android:layout_marginStart="@dimen/_8sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

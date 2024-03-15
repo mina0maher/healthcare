@@ -8,8 +8,8 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Base64
 import android.view.View
-import android.widget.AutoCompleteTextView
 import android.widget.FrameLayout
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -30,7 +30,7 @@ private lateinit var textAddImage:TextView
 private lateinit var layoutImage: FrameLayout
 private var encodedImage = ""
     val CLINICS :ArrayList<ClinicModel> = ArrayList<ClinicModel>()
-    private lateinit var autoCompleteTextView: AutoCompleteTextView
+    private lateinit var autoCompleteTextView: Spinner
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,8 +56,10 @@ private var encodedImage = ""
         CLINICS.add(ClinicModel("Dentistry",R.drawable.dentistry))
         CLINICS.add(ClinicModel("Psychiatry",R.drawable.psychiatry))
         val dropDownAdapter = DropDownAdapter(requireContext(),CLINICS)
-        dropDownAdapter.setDropDownViewResource(R.layout.addcar_dropdown_item)
-        autoCompleteTextView.setAdapter(dropDownAdapter)
+         dropDownAdapter.setDropDownViewResource(R.layout.addcar_dropdown_item)
+
+        autoCompleteTextView.adapter = dropDownAdapter
+
 
     }
 

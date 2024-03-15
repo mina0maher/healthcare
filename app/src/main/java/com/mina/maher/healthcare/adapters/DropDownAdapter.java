@@ -19,13 +19,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DropDownAdapter extends ArrayAdapter<ClinicModel> {
 
-    // invoke the suitable constructor of the ArrayAdapter class
     public DropDownAdapter(@NonNull Context context, ArrayList<ClinicModel> arrayList) {
 
 
         // pass the context and arrayList for the super
         // constructor of the ArrayAdapter class
-        super(context, 0, arrayList);
+        super(context, R.layout.addcar_dropdown_item,R.id.text_car_name, arrayList);
     }
 
     @NonNull
