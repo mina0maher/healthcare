@@ -48,6 +48,7 @@ dependencies {
     implementation ("com.intuit.ssp:ssp-android:1.0.6")
     //rounded imageView
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation ("com.makeramen:roundedimageview:2.3.0")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

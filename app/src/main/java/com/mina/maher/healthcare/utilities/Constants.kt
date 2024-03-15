@@ -1,6 +1,7 @@
 package com.mina.maher.healthcare.utilities
 import android.content.Context
 import android.widget.Toast
+import com.mina.maher.healthcare.models.ClinicModel
 
 
 object Constants {
@@ -18,7 +19,10 @@ object Constants {
     const val KEY_IS_SIGNUP_CLICKED = "isSignUpClicked"
     const val KEY_IS_VERIFIED="isVerified"
     private var toast: Toast? = null
-     fun showToast(message: String,context: Context) {
+
+
+
+    fun showToast(message: String,context: Context) {
         if(toast !=null){
             toast!!.cancel()
 
@@ -26,6 +30,7 @@ object Constants {
         toast =  Toast.makeText(context,message,Toast.LENGTH_SHORT)
         toast!!.show()
     }
+
 
 
 

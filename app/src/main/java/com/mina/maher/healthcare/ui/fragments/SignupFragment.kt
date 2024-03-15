@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.mina.maher.healthcare.R
+import com.mina.maher.healthcare.utilities.Constants
 import com.mina.maher.healthcare.utilities.Constants.KEY_IS_SIGNUP_CLICKED
 import com.mina.maher.healthcare.utilities.Constants.showToast
 import com.mina.maher.healthcare.utilities.PreferenceManager
@@ -33,7 +34,6 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
     private lateinit var preferenceManager: PreferenceManager
     //vars
     private var isSignUpClicked = false
-    private lateinit var dialog:Dialog
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +49,6 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
         if(savedInstanceState!=null){
             isSignUpClicked = savedInstanceState.getBoolean(KEY_IS_SIGNUP_CLICKED)
         }
-        dialog = Dialog(requireContext())
 
 
     }
@@ -108,7 +107,14 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
 
             isSignUpClicked = true
             loading(true)
-
+        if (radioClient.isChecked){
+            findNavController().navigate(R.id.action_signupFragment_to_patientFragment)
+            preferenceManager.putBoolean(Constants.KEY_PATIENT_IS_SIGNED,true)
+        }else{
+            findNavController().navigate(R.id.action_signupFragment_to_doctorInfoFragment)
+        }
+        preferenceManager.putString(Constants.KEY_USER_NAME,inputName.text.toString())
+        preferenceManager.putString(Constants.KEY_USER_NAME,inputName.text.toString())
 
 
     }
