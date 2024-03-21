@@ -1,6 +1,7 @@
 package com.mina.maher.healthcare.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ public class DropDownAdapter extends ArrayAdapter<ClinicModel> {
 
         // pass the context and arrayList for the super
         // constructor of the ArrayAdapter class
-        super(context, R.layout.addcar_dropdown_item,R.id.text_car_name, arrayList);
+        super(context, R.layout.item_dropdown,R.id.text_car_name, arrayList);
     }
 
     @NonNull
@@ -36,7 +37,35 @@ public class DropDownAdapter extends ArrayAdapter<ClinicModel> {
 
         // of the recyclable view is null then inflate the custom layout for the same
         if (currentItemView == null) {
-            currentItemView = LayoutInflater.from(getContext()).inflate(R.layout.addcar_dropdown_item, parent, false);
+            currentItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_dropdown, parent, false);
+        }
+
+        // get the position of the view from the ArrayAdapter
+        ClinicModel currentVehiclePosition = getItem(position);
+
+
+        // then according to the position of the view assign the desired image for the same
+        CircleImageView numbersImage = currentItemView.findViewById(R.id.carImage);
+        assert currentVehiclePosition != null;
+        numbersImage.setImageResource(currentVehiclePosition.getImageId());
+        // then according to the position of the view assign the desired TextView 1 for the same
+        TextView textView1 = currentItemView.findViewById(R.id.text_car_name);
+        textView1.setText(currentVehiclePosition.getName());
+        Log.d("ADebugTag", "name : " +currentVehiclePosition.getName() );
+        Log.d("ADebugTag", "image: " +currentVehiclePosition.getImageId() );
+
+        // then return the recyclable view
+        return currentItemView;
+    }
+
+    @Override
+    public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        // convertView which is recyclable view
+        View currentItemView = convertView;
+
+        // of the recyclable view is null then inflate the custom layout for the same
+        if (currentItemView == null) {
+            currentItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_dropdown, parent, false);
         }
 
         // get the position of the view from the ArrayAdapter
@@ -52,6 +81,5 @@ public class DropDownAdapter extends ArrayAdapter<ClinicModel> {
         textView1.setText(currentVehiclePosition.getName());
 
         // then return the recyclable view
-        return currentItemView;
-    }
+        return currentItemView;    }
 }

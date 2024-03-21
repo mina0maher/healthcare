@@ -47,7 +47,7 @@
         </FrameLayout>
 
         <Spinner
-            tools:listitem="@layout/addcar_dropdown_item"
+            tools:listitem="@layout/item_dropdown"
             android:id="@+id/clinicName"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
@@ -98,21 +98,5 @@
         </FrameLayout>
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/textSignIn"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="@string/sign_in"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold"
-            app:cornerRadius="@dimen/_8sdp"
-            android:elevation="@dimen/_50sdp"
-            app:rippleColor="@color/gray1"
-            app:strokeColor="@color/gray1"
-            app:strokeWidth="1dp"
-            android:backgroundTint="@color/white"
-            />
     </LinearLayout>
 </ScrollView>

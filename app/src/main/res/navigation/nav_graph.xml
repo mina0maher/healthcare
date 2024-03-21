@@ -135,6 +135,15 @@
         android:id="@+id/doctorDashboardFragment"
         android:name="com.mina.maher.healthcare.ui.fragments.DoctorDashboardFragment"
         android:label="fragment_doctor_dashboard"
-        tools:layout="@layout/fragment_doctor_dashboard" />
+        tools:layout="@layout/fragment_doctor_dashboard" >
+        <action
+            android:id="@+id/action_doctorDashboardFragment_to_myAppointmentsFragment"
+            app:destination="@id/myAppointmentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAppointmentsFragment"
+        android:name="com.mina.maher.healthcare.ui.fragments.MyAppointmentsFragment"
+        android:label="fragment_my_appointments"
+        tools:layout="@layout/fragment_my_appointments" />
 
 </navigation>
