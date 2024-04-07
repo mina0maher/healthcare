@@ -29,6 +29,13 @@ class DoctorDashboardFragment:Fragment(R.layout.fragment_doctor_dashboard) {
         myAppointmentsView.setOnClickListener {
             findNavController().navigate(R.id.action_doctorDashboardFragment_to_myAppointmentsFragment)
         }
+        addAppointmentsView.setOnClickListener {
+            findNavController().navigate(R.id.action_doctorDashboardFragment_to_addAppointmentsFragment)
+        }
+        signOutImage.setOnClickListener{
+            preferenceManager.clear()
+            findNavController().navigate(R.id.action_doctorDashboardFragment_to_startFragment)
+        }
     }
     private fun setViewsData(){
         val addAppointmentsText = addAppointmentsView.findViewById<TextView>(R.id.title)

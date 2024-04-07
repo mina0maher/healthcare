@@ -62,37 +62,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:text="@string/create_new_account"
-                    android:textColor="@color/primary_text"
-                    android:textSize="@dimen/_18ssp"
-                    android:textStyle="bold"/>
-                <FrameLayout
-                    android:id="@+id/layoutImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp">
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:id="@+id/imageProfile"
-                        android:layout_width="@dimen/_80sdp"
-                        android:layout_height="@dimen/_80sdp"
-                        android:background="@drawable/background_image"
-                        android:scaleType="centerCrop"
-                        app:riv_oval="true"/>
-                    <TextView
-                        android:id="@+id/textAddImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="ADD IMAGE"
-                        android:textColor="@color/secondary_text"
-                        android:textSize="@dimen/_10ssp"/>
 
 
-                </FrameLayout>
 
                 <Spinner
                     tools:listitem="@layout/item_dropdown"
@@ -106,32 +77,29 @@
                     android:paddingStart="@dimen/_16sdp"
                     android:paddingEnd="@dimen/_16sdp"
                     />
-
-                <EditText
-                    android:id="@+id/inputPhone"
+                <Spinner
+                    tools:listitem="@layout/item_dropdown"
+                    android:id="@+id/hospitalName"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:layout_marginTop="@dimen/_16sdp"
                     android:background="@drawable/background_input"
-                    android:hint="Phone number"
-                    android:imeOptions="actionDone"
-                    android:importantForAutofill="no"
-                    android:inputType="phone"
+                    android:hint="Hospital Name"
+                    android:spinnerMode="dropdown"
                     android:paddingStart="@dimen/_16sdp"
                     android:paddingEnd="@dimen/_16sdp"
-                    android:textColor="@color/primary_text"
-                    android:textSize="@dimen/_13ssp"/>
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
                     android:animateLayoutChanges="true">
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/buttonSignUp"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
-                        android:text="@string/sing_up"
+                        android:text="Continue"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_13ssp"
                         android:textStyle="bold"

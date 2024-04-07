@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.AddAppointmentsFragment"
+    android:background="@color/primary_light">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageSignOut"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:background="@drawable/background_icon"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:tint="@color/white"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageMore"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/background_icon"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:tint="@color/white"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/background_content_bottom"
+            android:clipToPadding="false"
+            android:elevation="@dimen/_32sdp"
+            android:overScrollMode="never"
+            android:padding="@dimen/_20ssp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:text="Choose day :"
+    android:textColor="@color/primary_text"
+    android:textSize="@dimen/_15ssp"
+    android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               >
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/sat"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/primary_light"
+                    android:text="sat"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:background="@drawable/radio_button_left_selector"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/sun"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/primary_light"
+                    android:text="sun"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:background="@drawable/radio_button_center_selector"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/mon"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/primary_light"
+                    android:text="mon"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:background="@drawable/radio_button_center_selector"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tue"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/primary_light"
+                    android:text="tue"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_center_selector"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/wed"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/primary_light"
+                    android:text="wed"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:background="@drawable/radio_button_center_selector"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/thu"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/primary_light"
+                    android:text="thu"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:background="@drawable/radio_button_center_selector"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/fri"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:textColor="@android:color/white"
+                    android:text="fri"
+                    android:gravity="center"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:background="@drawable/radio_button_right_selector"/>
+            </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="From :"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+    <EditText
+        android:id="@+id/inputFrom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_input"
+        android:hint="Choose Start Time"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="To :"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+    <EditText
+        android:id="@+id/inputTo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_input"
+        android:hint="Choose End Time"
+        android:imeOptions="
+"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Choose Hospital :"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+    <Spinner
+        tools:listitem="@layout/item_dropdown"
+        android:id="@+id/hospitalName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/background_input"
+        android:hint="Hospital Name"
+        android:spinnerMode="dropdown"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/_8sdp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+</LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo3"
+        android:transitionName="image_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/_10sdp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

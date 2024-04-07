@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.mina.maher.healthcare.R
 import com.mina.maher.healthcare.utilities.Constants
 import com.mina.maher.healthcare.utilities.PreferenceManager
@@ -52,6 +53,7 @@ class PatientFragment:Fragment(R.layout.fragment_patient) {
     private fun setListeners(){
         signOutImage.setOnClickListener {
             preferenceManager.clear()
+            findNavController().navigate(R.id.action_patientFragment_to_startFragment)
         }
         registerForContextMenu(moreImage)
         moreImage.setOnClickListener {view ->

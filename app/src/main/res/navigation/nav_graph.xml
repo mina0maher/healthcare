@@ -130,7 +130,17 @@
     <fragment
         android:id="@+id/patientFragment"
         android:name="com.mina.maher.healthcare.ui.fragments.PatientFragment"
-        android:label="PatientFragment" />
+        android:label="PatientFragment" >
+        <action
+            android:id="@+id/action_patientFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
         android:id="@+id/doctorDashboardFragment"
         android:name="com.mina.maher.healthcare.ui.fragments.DoctorDashboardFragment"
@@ -139,11 +149,28 @@
         <action
             android:id="@+id/action_doctorDashboardFragment_to_myAppointmentsFragment"
             app:destination="@id/myAppointmentsFragment" />
+        <action
+            android:id="@+id/action_doctorDashboardFragment_to_addAppointmentsFragment"
+            app:destination="@id/addAppointmentsFragment" />
+        <action
+            android:id="@+id/action_doctorDashboardFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/myAppointmentsFragment"
         android:name="com.mina.maher.healthcare.ui.fragments.MyAppointmentsFragment"
         android:label="fragment_my_appointments"
         tools:layout="@layout/fragment_my_appointments" />
+    <fragment
+        android:id="@+id/addAppointmentsFragment"
+        android:name="com.mina.maher.healthcare.ui.fragments.AddAppointmentsFragment"
+        android:label="fragment_add_appointment"
+        tools:layout="@layout/fragment_add_appointment" />
 
 </navigation>
