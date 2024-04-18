@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.BloodDonationFragment"
+    tools:context=".ui.fragments.BloodTransfusionFragment"
     android:background="@color/primary_light">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageSignOut"
@@ -82,29 +82,48 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="Choose Blood Type :"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+            <Spinner
+                tools:listitem="@layout/item_dropdown"
+                android:id="@+id/bloodType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/background_input"
+                android:hint="Hospital Name"
+                android:spinnerMode="dropdown"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:text="Choose Time :"
+                android:text="Choose blood Group :"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_gravity="start"/>
-            <EditText
-                android:id="@+id/inputTo"
+            <Spinner
+                tools:listitem="@layout/item_dropdown"
+                android:id="@+id/bloodGroup"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:background="@drawable/background_input"
-                android:hint="Choose Time"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="time"
+                android:hint="Hospital Name"
+                android:spinnerMode="dropdown"
                 android:paddingStart="@dimen/_16sdp"
                 android:paddingEnd="@dimen/_16sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="@color/primary_text"
-                android:textSize="@dimen/_13ssp" />
+                />
 
 
             <FrameLayout

@@ -83,6 +83,9 @@ class PatientFragment:Fragment(R.layout.fragment_patient) {
         bloodDonationView.setOnClickListener {
             findNavController().navigate(R.id.action_patientFragment_to_bloodDonationFragment)
         }
+        bloodTransfusionView.setOnClickListener {
+            findNavController().navigate(R.id.action_patientFragment_to_bloodTransfusionFragment)
+        }
     }
 
 

@@ -149,7 +149,18 @@
             app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_patientFragment_to_bloodDonationFragment"
-            app:destination="@id/bloodDonationFragment" />
+            app:destination="@id/bloodDonationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_patientFragment_to_bloodTransfusionFragment"
+            app:destination="@id/bloodTransfusionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/doctorDashboardFragment"
@@ -216,5 +227,10 @@
         android:id="@+id/bloodDonationFragment"
         android:name="com.mina.maher.healthcare.ui.fragments.BloodDonationFragment"
         android:label="BloodDonationFragment" />
+    <fragment
+        android:id="@+id/bloodTransfusionFragment"
+        android:name="com.mina.maher.healthcare.ui.fragments.BloodTransfusionFragment"
+        android:label="fragment_blood_transfusion"
+        tools:layout="@layout/fragment_blood_transfusion" />
 
 </navigation>
