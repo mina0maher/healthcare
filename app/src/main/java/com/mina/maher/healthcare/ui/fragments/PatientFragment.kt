@@ -77,6 +77,12 @@ class PatientFragment:Fragment(R.layout.fragment_patient) {
                 }
             popupMenu.show()
         }
+        clinicsView.setOnClickListener {
+            findNavController().navigate(R.id.action_patientFragment_to_chooseClinicFragment)
+        }
+        bloodDonationView.setOnClickListener {
+            findNavController().navigate(R.id.action_patientFragment_to_bloodDonationFragment)
+        }
     }
 
 

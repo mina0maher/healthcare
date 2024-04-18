@@ -140,6 +140,16 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_patientFragment_to_chooseClinicFragment"
+            app:destination="@id/chooseClinicFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_patientFragment_to_bloodDonationFragment"
+            app:destination="@id/bloodDonationFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorDashboardFragment"
@@ -172,5 +182,39 @@
         android:name="com.mina.maher.healthcare.ui.fragments.AddAppointmentsFragment"
         android:label="fragment_add_appointment"
         tools:layout="@layout/fragment_add_appointment" />
+    <fragment
+        android:id="@+id/chooseClinicFragment"
+        android:name="com.mina.maher.healthcare.ui.fragments.ChooseClinicFragment"
+        android:label="ChooseClinicFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+        <action
+            android:id="@+id/action_chooseClinicFragment_to_chooseDoctorFragment"
+            app:destination="@id/chooseDoctorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chooseDoctorFragment"
+        android:name="com.mina.maher.healthcare.ui.fragments.ChooseDoctorFragment"
+        android:label="ChooseDoctorFragment" >
+        <action
+            android:id="@+id/action_chooseDoctorFragment_to_patientFragment"
+            app:destination="@id/patientFragment"
+            app:popUpTo="@id/patientFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bloodDonationFragment"
+        android:name="com.mina.maher.healthcare.ui.fragments.BloodDonationFragment"
+        android:label="BloodDonationFragment" />
 
 </navigation>

@@ -2,6 +2,7 @@ package com.mina.maher.healthcare.utilities
 import android.content.Context
 import android.widget.Toast
 import com.mina.maher.healthcare.models.ClinicModel
+import java.security.Key
 
 
 object Constants {
@@ -18,6 +19,11 @@ object Constants {
     const val KEY_IS_LOGIN_CLICKED = "isLoginClicked"
     const val KEY_IS_SIGNUP_CLICKED = "isSignUpClicked"
     const val KEY_IS_VERIFIED="isVerified"
+    const val KEY_CLINIC=""
+    const val KEY_DAY=""
+    const val KEY_HOSPITAL=""
+    const val KEY_DOCTOR=""
+    const val KEY_TIME=""
     private var toast: Toast? = null
 
 

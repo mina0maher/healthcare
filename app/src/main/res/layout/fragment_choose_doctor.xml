@@ -58,115 +58,57 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ImageView">
 
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Choose Doctor :"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_gravity="start"/>
 
                 <Spinner
                     tools:listitem="@layout/item_dropdown"
                     android:id="@+id/doctorName"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
                     android:background="@drawable/background_input"
                     android:hint="Clinic Name"
                     android:spinnerMode="dropdown"
                     android:paddingStart="@dimen/_16sdp"
                     android:paddingEnd="@dimen/_16sdp"
-                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     />
 
-                <RadioGroup
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/sat"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@color/primary_light"
-                        android:text="sat"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:background="@drawable/radio_button_left_selector"/>
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/sun"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@color/primary_light"
-                        android:text="sun"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:background="@drawable/radio_button_center_selector"/>
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/mon"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@color/primary_light"
-                        android:text="mon"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:background="@drawable/radio_button_center_selector"/>
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/tue"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@color/primary_light"
-                        android:text="tue"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:background="@drawable/radio_button_center_selector"/>
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/wed"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@color/primary_light"
-                        android:text="wed"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:background="@drawable/radio_button_center_selector"/>
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/thu"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@color/primary_light"
-                        android:text="thu"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:background="@drawable/radio_button_center_selector"/>
-                    <androidx.appcompat.widget.AppCompatRadioButton
-                        android:id="@+id/fri"
-                        android:layout_width="0dp"
-                        android:layout_height="50dp"
-                        android:textColor="@android:color/white"
-                        android:text="fri"
-                        android:gravity="center"
-                        android:button="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:background="@drawable/radio_button_right_selector"/>
-                </RadioGroup>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/scrollView2"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Choose Time :"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_gravity="start"/>
+                <EditText
+                    android:id="@+id/inputTo"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="@integer/material_motion_duration_long_1"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_appointment"
-                    android:clipToPadding="false"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:scrollbars="none"
-                    />
+                    android:layout_height="@dimen/_45sdp"
+                    android:background="@drawable/background_input"
+                    android:hint="Choose Strart Time"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="time"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_13ssp" />
+
 
                 <FrameLayout
                     android:layout_width="match_parent"

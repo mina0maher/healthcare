@@ -63,20 +63,39 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Choose Clinic :"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_gravity="start"/>
 
                 <Spinner
                     tools:listitem="@layout/item_dropdown"
                     android:id="@+id/clinicName"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@drawable/background_input"
                     android:hint="Clinic Name"
                     android:spinnerMode="dropdown"
                     android:paddingStart="@dimen/_16sdp"
                     android:paddingEnd="@dimen/_16sdp"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Choose Hospital :"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_gravity="start"/>
                 <Spinner
                     tools:listitem="@layout/item_dropdown"
                     android:id="@+id/hospitalName"
@@ -87,9 +106,102 @@
                     android:spinnerMode="dropdown"
                     android:paddingStart="@dimen/_16sdp"
                     android:paddingEnd="@dimen/_16sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Choose day :"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_gravity="start"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    >
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/sat"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@color/primary_light"
+                        android:text="sat"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/radio_button_left_selector"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/sun"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@color/primary_light"
+                        android:text="sun"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/radio_button_center_selector"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/mon"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@color/primary_light"
+                        android:text="mon"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/radio_button_center_selector"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/tue"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@color/primary_light"
+                        android:text="tue"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_button_center_selector"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/wed"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@color/primary_light"
+                        android:text="wed"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/radio_button_center_selector"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/thu"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@color/primary_light"
+                        android:text="thu"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/radio_button_center_selector"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/fri"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:textColor="@android:color/white"
+                        android:text="fri"
+                        android:gravity="center"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:background="@drawable/radio_button_right_selector"/>
+                </RadioGroup>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
