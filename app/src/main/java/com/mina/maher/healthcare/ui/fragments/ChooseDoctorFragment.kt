@@ -1,5 +1,8 @@
 package com.mina.maher.healthcare.ui.fragments
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -25,9 +29,11 @@ class ChooseDoctorFragment: Fragment(R.layout.fragment_choose_doctor) {
     private lateinit var buttonSignUp: Button
     private lateinit var progressBar: ProgressBar
     private lateinit var preferenceManager: PreferenceManager
+    private lateinit var dialog: Dialog
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        dialog = Dialog(requireContext())
         preferenceManager = PreferenceManager(requireActivity())
         buttonSignUp = view.findViewById(R.id.buttonSignUp)
         progressBar =view.findViewById(R.id.progressBar)
@@ -48,10 +54,12 @@ class ChooseDoctorFragment: Fragment(R.layout.fragment_choose_doctor) {
             if(time.text.toString()=="2:00"){
                 Constants.showToast("Sorry this appointment is not available",requireContext())
             }else{
-                preferenceManager.putString(Constants.KEY_TIME,time.text.toString())
-                preferenceManager.putString(Constants.KEY_DOCTOR,doctorsSpinner.toString())
+
                 Constants.showToast("done",requireContext())
-                findNavController().navigate(R.id.action_chooseDoctorFragment_to_patientFragment)
+                openConfirmationDialog(preferenceManager.getString(Constants.KEY_DAY)+","+time.text.toString()+"\n"
+                                            +preferenceManager.getString(Constants.KEY_HOSPITAL)+"\n"
+                                              +preferenceManager.getString(Constants.KEY_CLINIC)+"\n"
+                                                +doctors.get(doctorsSpinner.selectedItemId.toInt()).name)
             }
 
             loading(false)
@@ -67,5 +75,26 @@ class ChooseDoctorFragment: Fragment(R.layout.fragment_choose_doctor) {
             progressBar.visibility = View.INVISIBLE
             buttonSignUp.visibility = View.VISIBLE
         }
+    }
+    private fun openConfirmationDialog(text:String) {
+        dialog.setContentView(R.layout.confirmation_dialog_layout)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        val textView: TextView = dialog.findViewById(R.id.textDismiss)
+        val ticketsText: TextView = dialog.findViewById(R.id.ticket_text)
+        ticketsText.text=text
+        val button: Button = dialog.findViewById(R.id.buttonSeeGates)
+        textView.setOnClickListener {
+            dialog.dismiss()
+            Constants.showToast("Deleted",requireContext())
+        }
+        button.setOnClickListener {
+            dialog.dismiss()
+            findNavController().navigate(R.id.action_chooseDoctorFragment_to_patientFragment)
+        }
+        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
+        val height = (resources.displayMetrics.heightPixels * 0.80).toInt()
+        dialog.window!!.setLayout(width, height)
+        dialog.setCancelable(false)
+        dialog.show()
     }
 }

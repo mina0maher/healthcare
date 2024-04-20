@@ -27,7 +27,7 @@
         <action
             android:id="@+id/action_startFragment_to_patientFragment"
             app:destination="@id/patientFragment"
-            app:popUpTo="@id/patientFragment"
+            app:popUpTo="@id/startFragment"
             app:popUpToInclusive="true"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -176,7 +176,7 @@
         <action
             android:id="@+id/action_doctorDashboardFragment_to_startFragment"
             app:destination="@id/startFragment"
-            app:popUpTo="@id/startFragment"
+            app:popUpTo="@id/doctorDashboardFragment"
             app:popUpToInclusive="true"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"

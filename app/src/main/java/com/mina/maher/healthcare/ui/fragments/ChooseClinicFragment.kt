@@ -137,8 +137,8 @@ class ChooseClinicFragment: Fragment(R.layout.fragment_choose_clinic) {
         buttonSignUp.setOnClickListener {
             loading(true)
             preferenceManager.putString(Constants.KEY_DAY,day)
-            preferenceManager.putString(Constants.KEY_HOSPITAL,hospitalsSpinner.toString())
-            preferenceManager.putString(Constants.KEY_CLINIC,clinicsSpinner.toString())
+            preferenceManager.putString(Constants.KEY_HOSPITAL,hospitalsAdapter.getItem(hospitalsSpinner.selectedItemId.toInt())!!.name)
+            preferenceManager.putString(Constants.KEY_CLINIC,clinicsAdapter.getItem(clinicsSpinner.selectedItemId.toInt())!!.name)
             findNavController().navigate(R.id.action_chooseClinicFragment_to_chooseDoctorFragment)
             loading(false)
 
