@@ -33,6 +33,7 @@ class PatientFragment:Fragment(R.layout.fragment_patient) {
         bloodTransfusionView = view.findViewById(R.id.blood_transfusion)
         signOutImage = view.findViewById(R.id.imageSignOut)
         moreImage = view.findViewById(R.id.imageMore)
+        welcomeText.text="Welcome ${preferenceManager.getString(Constants.KEY_USER_NAME)}!"
         setViewsData()
         setListeners()
     }

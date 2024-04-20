@@ -114,9 +114,6 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
             findNavController().navigate(R.id.action_signupFragment_to_doctorInfoFragment)
         }
         preferenceManager.putString(Constants.KEY_USER_NAME,inputName.text.toString())
-        preferenceManager.putString(Constants.KEY_USER_NAME,inputName.text.toString())
-
-
     }
     private fun loading(isLoading: Boolean) {
         if (isLoading) {

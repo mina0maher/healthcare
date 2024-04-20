@@ -103,14 +103,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private fun signIn(){
 
         isLoginClicked = true
-        if(inputEmail.text.toString() == "user1@gmail.com" &&
+        if(inputEmail.text.toString() == "ahmed@gmail.com" &&
              inputPassword.text.toString() == "123456"){
                     preferenceManager.putBoolean(Constants.KEY_PATIENT_IS_SIGNED, true)
                     findNavController().navigate(R.id.action_loginFragment_to_patientFragment)
+                    preferenceManager.putString(Constants.KEY_USER_NAME,"ahmed")
                     loading(false)
-        }else if(inputEmail.text.toString() == "doctor1@gmail.com" &&
+        }else if(inputEmail.text.toString() == "ahmed@gmail.com" &&
             inputPassword.text.toString() == "123456"){
                     preferenceManager.putBoolean(Constants.KEY_DOCTOR_IS_SIGNED, true)
+                    preferenceManager.putString(Constants.KEY_USER_NAME,"ahmed")
                     findNavController().navigate(R.id.action_loginFragment_to_doctorDashboardFragment)
                     loading(false)
         }else{

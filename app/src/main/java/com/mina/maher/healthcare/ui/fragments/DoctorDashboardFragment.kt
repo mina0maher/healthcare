@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.mina.maher.healthcare.R
+import com.mina.maher.healthcare.utilities.Constants
 import com.mina.maher.healthcare.utilities.PreferenceManager
 
 class DoctorDashboardFragment:Fragment(R.layout.fragment_doctor_dashboard) {
@@ -25,6 +26,8 @@ class DoctorDashboardFragment:Fragment(R.layout.fragment_doctor_dashboard) {
         myAppointmentsView = view.findViewById(R.id.myAppointments)
         signOutImage = view.findViewById(R.id.imageSignOut)
         moreImage = view.findViewById(R.id.imageMore)
+        welcomeText.text="Welcome DR.${preferenceManager.getString(Constants.KEY_USER_NAME)}!"
+
         setViewsData()
         myAppointmentsView.setOnClickListener {
             findNavController().navigate(R.id.action_doctorDashboardFragment_to_myAppointmentsFragment)
