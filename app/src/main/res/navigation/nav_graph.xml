@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.StartFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.LoginFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -80,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.SignupFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.SignupFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" >
         <action
@@ -114,7 +114,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorInfoFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.DoctorInfoFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.DoctorInfoFragment"
         android:label="fragment_doctor_info"
         tools:layout="@layout/fragment_doctor_info" >
         <action
@@ -129,7 +129,7 @@
     </fragment>
     <fragment
         android:id="@+id/patientFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.PatientFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.PatientFragment"
         android:label="PatientFragment" >
         <action
             android:id="@+id/action_patientFragment_to_startFragment"
@@ -164,7 +164,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorDashboardFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.DoctorDashboardFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.DoctorDashboardFragment"
         android:label="fragment_doctor_dashboard"
         tools:layout="@layout/fragment_doctor_dashboard" >
         <action
@@ -185,17 +185,17 @@
     </fragment>
     <fragment
         android:id="@+id/myAppointmentsFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.MyAppointmentsFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.MyAppointmentsFragment"
         android:label="fragment_my_appointments"
         tools:layout="@layout/fragment_my_appointments" />
     <fragment
         android:id="@+id/addAppointmentsFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.AddAppointmentsFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.AddAppointmentsFragment"
         android:label="fragment_add_appointment"
         tools:layout="@layout/fragment_add_appointment" />
     <fragment
         android:id="@+id/chooseClinicFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.ChooseClinicFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.ChooseClinicFragment"
         android:label="ChooseClinicFragment"
         app:enterAnim="@anim/slide_in_right"
         app:exitAnim="@anim/slide_out_left"
@@ -211,7 +211,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooseDoctorFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.ChooseDoctorFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.ChooseDoctorFragment"
         android:label="ChooseDoctorFragment" >
         <action
             android:id="@+id/action_chooseDoctorFragment_to_patientFragment"
@@ -225,11 +225,11 @@
     </fragment>
     <fragment
         android:id="@+id/bloodDonationFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.BloodDonationFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.BloodDonationFragment"
         android:label="BloodDonationFragment" />
     <fragment
         android:id="@+id/bloodTransfusionFragment"
-        android:name="com.mina.maher.healthcare.ui.fragments.BloodTransfusionFragment"
+        android:name="com.ali.ehab.healthcare.ui.fragments.BloodTransfusionFragment"
         android:label="fragment_blood_transfusion"
         tools:layout="@layout/fragment_blood_transfusion" />
 

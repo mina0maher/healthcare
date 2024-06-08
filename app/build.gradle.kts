@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mina.maher.healthcare"
+    namespace = "com.ali.ehab.healthcare"
     compileSdk = 34
 
     bundle{
@@ -13,7 +13,7 @@ android {
         }
     }
     defaultConfig {
-        applicationId = "com.mina.maher.healthcare"
+        applicationId = "com.ali.ehab.healthcare"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

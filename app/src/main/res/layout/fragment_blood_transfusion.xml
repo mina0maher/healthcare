@@ -96,7 +96,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:background="@drawable/background_input"
-                android:hint="Hospital Name"
                 android:spinnerMode="dropdown"
                 android:paddingStart="@dimen/_16sdp"
                 android:paddingEnd="@dimen/_16sdp"
