@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_50sdp"
-        android:text="Let's get started!"
+        android:text="@string/let_s_get_started"
         android:textColor="@color/black"
         android:textSize="@dimen/_30ssp"
         android:textStyle="bold"
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
             android:elevation="@dimen/_35sdp"
-            android:text="Sign Up"
+            android:text="@string/sing_up"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_13ssp"
@@ -80,7 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account?"
+            android:text="@string/already_have_an_account"
             android:textColor="@color/black"
             android:textSize="@dimen/_12ssp"
             />
@@ -88,7 +88,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Log In"
+            android:text="@string/sign_in"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
             android:textStyle="bold"/>

@@ -75,15 +75,15 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private fun isValidSignInDetails():Boolean
     {
         return if (inputEmail.text.toString().trim().isEmpty()) {
-            Constants.showToast("Enter email", requireActivity())
+            Constants.showToast(resources.getString(R.string.enter_email), requireActivity())
             false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(inputEmail.text.toString())
                 .matches()
         ) {
-            Constants.showToast("Enter valid email", requireActivity())
+            Constants.showToast(resources.getString(R.string.enter_valid_email), requireActivity())
             false
         } else if (inputPassword.text.toString().trim().isEmpty()) {
-            Constants.showToast("Enter password", requireActivity())
+            Constants.showToast(resources.getString(R.string.enter_password), requireActivity())
             false
         } else {
             true
@@ -106,16 +106,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
              inputPassword.text.toString() == "123456"){
                     preferenceManager.putBoolean(Constants.KEY_PATIENT_IS_SIGNED, true)
                     findNavController().navigate(R.id.action_loginFragment_to_patientFragment)
-                    preferenceManager.putString(Constants.KEY_USER_NAME,"ahmed")
+                    preferenceManager.putString(Constants.KEY_USER_NAME,resources.getString(R.string.ahmed))
                     loading(false)
-        }else if(inputEmail.text.toString() == "ahmed@gmail.com" &&
+        }else if(inputEmail.text.toString() == "drahmed@gmail.com" &&
             inputPassword.text.toString() == "123456"){
                     preferenceManager.putBoolean(Constants.KEY_DOCTOR_IS_SIGNED, true)
-                    preferenceManager.putString(Constants.KEY_USER_NAME,"ahmed")
+                    preferenceManager.putString(Constants.KEY_USER_NAME,resources.getString(R.string.ahmed))
                     findNavController().navigate(R.id.action_loginFragment_to_doctorDashboardFragment)
                     loading(false)
         }else{
-            Constants.showToast("email & password not correct", requireActivity())
+            Constants.showToast(resources.getString(R.string.email_or_password_not_correct), requireActivity())
             loading(false)
             isLoginClicked=false
         }

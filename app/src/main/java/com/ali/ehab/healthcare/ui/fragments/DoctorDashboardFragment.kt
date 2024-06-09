@@ -26,7 +26,7 @@ class DoctorDashboardFragment:Fragment(R.layout.fragment_doctor_dashboard) {
         myAppointmentsView = view.findViewById(R.id.myAppointments)
         signOutImage = view.findViewById(R.id.imageSignOut)
         moreImage = view.findViewById(R.id.imageMore)
-        welcomeText.text="Welcome DR.${preferenceManager.getString(Constants.KEY_USER_NAME)}!"
+        welcomeText.text="${resources.getString(R.string.welcome_dr)}${preferenceManager.getString(Constants.KEY_USER_NAME)}!"
 
         setViewsData()
         myAppointmentsView.setOnClickListener {
@@ -45,8 +45,8 @@ class DoctorDashboardFragment:Fragment(R.layout.fragment_doctor_dashboard) {
         val myAppointmentsText = myAppointmentsView.findViewById<TextView>(R.id.title)
         val addAppointmentsImage = addAppointmentsView.findViewById<ImageView>(R.id.thumbnail)
         val myAppointmentsImage = myAppointmentsView.findViewById<ImageView>(R.id.thumbnail)
-        addAppointmentsText.text = "Add Appointments"
-        myAppointmentsText.text = "My Appointments"
+        addAppointmentsText.text = resources.getString(R.string.add_appointments)
+        myAppointmentsText.text = resources.getString(R.string.my_appointments)
         addAppointmentsImage.setImageResource(R.drawable.add_appointments)
         myAppointmentsImage.setImageResource(R.drawable.my_appointments)
     }

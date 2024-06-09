@@ -49,7 +49,7 @@ class ChooseDoctorFragment: Fragment(R.layout.fragment_choose_doctor) {
         buttonSignUp.setOnClickListener {
             loading(true)
             if(time.text.toString()=="2:00"){
-                Constants.showToast("Sorry this appointment is not available",requireContext())
+                Constants.showToast(resources.getString(R.string.sorry_this_appointment_is_not_available),requireContext())
             }else{
 
                 Constants.showToast("done",requireContext())

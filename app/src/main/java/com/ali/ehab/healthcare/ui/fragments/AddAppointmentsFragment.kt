@@ -36,16 +36,16 @@ class AddAppointmentsFragment: Fragment(R.layout.fragment_add_appointment) {
         radioThu = view.findViewById(R.id.thu)
         radioFri = view.findViewById(R.id.fri)
         spinner = view.findViewById(R.id.hospitalName)
-        hospitals.add(ClinicModel("El Sherouk Hospital",R.drawable.shoroq))
-        hospitals.add(ClinicModel("Dar Alqmah Hospital",R.drawable.daralqamah))
-        hospitals.add(ClinicModel("Ibn Sina Hospital",R.drawable.ibnsinah))
-        hospitals.add(ClinicModel("Dar Alshefaa Hospital",R.drawable.daralqamah))
+        hospitals.add(ClinicModel(resources.getString(R.string.el_sherouk_hospital),R.drawable.shoroq))
+        hospitals.add(ClinicModel(resources.getString(R.string.dar_alqmah_hospital),R.drawable.daralqamah))
+        hospitals.add(ClinicModel(resources.getString(R.string.ibn_sina_hospital),R.drawable.ibnsinah))
+        hospitals.add(ClinicModel(resources.getString(R.string.dar_alshefaa_hospital),R.drawable.daralqamah))
         val dropDownAdapter = DropDownAdapter(requireContext(),hospitals)
         dropDownAdapter.setDropDownViewResource(R.layout.item_dropdown)
         spinner.adapter = dropDownAdapter
 
         buttonSignUp.setOnClickListener {
-            Constants.showToast("done",requireContext())
+            Constants.showToast(resources.getString(R.string.done),requireContext())
             requireActivity().onBackPressed()
         }
         radioSat.setOnClickListener {

@@ -126,24 +126,24 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
 
     private fun isValidSignUpDetails(): Boolean {
         return if (inputName.text.toString().trim().isEmpty()) {
-            showToast("Enter name",requireContext())
+            showToast(resources.getString(R.string.enter_name),requireContext())
             false
         } else if (inputEmail.text.toString().trim().isEmpty()) {
-            showToast("Enter email",requireContext())
+            showToast(resources.getString(R.string.enter_email),requireContext())
             false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(inputEmail.text.toString())
                 .matches()
         ) {
-            showToast("Enter valid email",requireContext())
+            showToast(resources.getString(R.string.enter_valid_email),requireContext())
             false
         } else if (inputPassword.text.toString().trim().isEmpty()) {
-            showToast("Enter Password",requireContext())
+            showToast(resources.getString(R.string.enter_password),requireContext())
             false
         } else if (inputConfirmPassword.text.toString().trim().isEmpty()) {
-            showToast("Confirm your Password",requireContext())
+            showToast(resources.getString(R.string.confirm_your_password),requireContext())
             false
         } else if (inputPassword.text.toString() != inputConfirmPassword.text.toString()) {
-            showToast("Password & confirm password must be same",requireContext())
+            showToast(resources.getString(R.string.password_confirm_password_must_be_same),requireContext())
             false
         } else {
             true

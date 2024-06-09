@@ -36,7 +36,7 @@ class DoctorInfoFragment : Fragment(R.layout.fragment_doctor_info) {
     private lateinit var layoutImage: FrameLayout
     private lateinit var inputPhone: EditText
     private var encodedImage = ""
-    private val CLINICS :ArrayList<ClinicModel> = ArrayList()
+    private val clinics :ArrayList<ClinicModel> = ArrayList()
     private lateinit var autoCompleteTextView: Spinner
 
     private lateinit var buttonSignUp: Button
@@ -60,15 +60,15 @@ class DoctorInfoFragment : Fragment(R.layout.fragment_doctor_info) {
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             pickImage.launch(intent)
         }
-        CLINICS.add(ClinicModel("Endocrinology",R.drawable.endocrinology))
-        CLINICS.add(ClinicModel("Cardiology",R.drawable.cardiology))
-        CLINICS.add(ClinicModel("Ophthalmology",R.drawable.ophthalmology))
-        CLINICS.add(ClinicModel("Pediatrics",R.drawable.pediatrics))
-        CLINICS.add(ClinicModel("Dermatology",R.drawable.dermatology))
-        CLINICS.add(ClinicModel("neurology",R.drawable.neurology))
-        CLINICS.add(ClinicModel("Dentistry",R.drawable.dentistry))
-        CLINICS.add(ClinicModel("Psychiatry",R.drawable.psychiatry))
-        val dropDownAdapter = DropDownAdapter(requireContext(),CLINICS)
+        clinics.add(ClinicModel(resources.getString(R.string.Endocrinology),R.drawable.endocrinology))
+        clinics.add(ClinicModel(resources.getString(R.string.Cardiology),R.drawable.cardiology))
+        clinics.add(ClinicModel(resources.getString(R.string.Ophthalmology),R.drawable.ophthalmology))
+        clinics.add(ClinicModel(resources.getString(R.string.Pediatrics),R.drawable.pediatrics))
+        clinics.add(ClinicModel(resources.getString(R.string.Dermatology),R.drawable.dermatology))
+        clinics.add(ClinicModel(resources.getString(R.string.neurology),R.drawable.neurology))
+        clinics.add(ClinicModel(resources.getString(R.string.Dentistry),R.drawable.dentistry))
+        clinics.add(ClinicModel(resources.getString(R.string.Psychiatry),R.drawable.psychiatry))
+        val dropDownAdapter = DropDownAdapter(requireContext(),clinics)
         dropDownAdapter.setDropDownViewResource(R.layout.item_dropdown)
         autoCompleteTextView.adapter = dropDownAdapter
 

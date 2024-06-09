@@ -26,10 +26,10 @@ class BloodTransfusionFragment: Fragment(R.layout.fragment_blood_transfusion) {
         buttonSignUp = view.findViewById(R.id.buttonSignUp)
         progressBar =view.findViewById(R.id.progressBar)
         hospitalsSpinner = view.findViewById(R.id.hospitalName)
-        hospitals.add(ClinicModel("El Sherouk Hospital",R.drawable.shoroq))
-        hospitals.add(ClinicModel("Dar Alqmah Hospital",R.drawable.daralqamah))
-        hospitals.add(ClinicModel("Ibn Sina Hospital",R.drawable.ibnsinah))
-        hospitals.add(ClinicModel("Dar Alshefaa Hospital",R.drawable.daralqamah))
+        hospitals.add(ClinicModel(resources.getString(R.string.el_sherouk_hospital),R.drawable.shoroq))
+        hospitals.add(ClinicModel(resources.getString(R.string.dar_alqmah_hospital),R.drawable.daralqamah))
+        hospitals.add(ClinicModel(resources.getString(R.string.ibn_sina_hospital),R.drawable.ibnsinah))
+        hospitals.add(ClinicModel(resources.getString(R.string.dar_alshefaa_hospital),R.drawable.daralqamah))
         val hospitalsAdapter = DropDownAdapter(requireContext(),hospitals)
         hospitalsAdapter.setDropDownViewResource(R.layout.item_dropdown)
         hospitalsSpinner.adapter = hospitalsAdapter
@@ -55,9 +55,9 @@ class BloodTransfusionFragment: Fragment(R.layout.fragment_blood_transfusion) {
             if(hospitalsSpinner.selectedItemId == 1L&&
                 typesSpinner.selectedItemId==1L&&
                 groupsSpinner.selectedItemId==1L){
-                Constants.showToast("Sorry This Blood Type&Group Is Not Available In This Hospital",requireContext())
+                Constants.showToast(resources.getString(R.string.sorry_this_blood_type),requireContext())
             }else{
-                Constants.showToast("Available",requireContext())
+                Constants.showToast(resources.getString(R.string.available),requireContext())
             }
             loading(false)
         }

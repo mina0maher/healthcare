@@ -24,10 +24,10 @@ class BloodDonationFragment: Fragment(R.layout.fragment_blood_donation) {
         buttonSignUp = view.findViewById(R.id.buttonSignUp)
         progressBar =view.findViewById(R.id.progressBar)
         hospitalsSpinner = view.findViewById(R.id.hospitalName)
-        hospitals.add(ClinicModel("El Sherouk Hospital",R.drawable.shoroq))
-        hospitals.add(ClinicModel("Dar Alqmah Hospital",R.drawable.daralqamah))
-        hospitals.add(ClinicModel("Ibn Sina Hospital",R.drawable.ibnsinah))
-        hospitals.add(ClinicModel("Dar Alshefaa Hospital",R.drawable.daralqamah))
+        hospitals.add(ClinicModel(resources.getString(R.string.el_sherouk_hospital),R.drawable.shoroq))
+        hospitals.add(ClinicModel(resources.getString(R.string.dar_alqmah_hospital),R.drawable.daralqamah))
+        hospitals.add(ClinicModel(resources.getString(R.string.ibn_sina_hospital),R.drawable.ibnsinah))
+        hospitals.add(ClinicModel(resources.getString(R.string.dar_alshefaa_hospital),R.drawable.daralqamah))
         val hospitalsAdapter = DropDownAdapter(requireContext(),hospitals)
         hospitalsAdapter.setDropDownViewResource(R.layout.item_dropdown)
         hospitalsSpinner.adapter = hospitalsAdapter
@@ -36,9 +36,9 @@ class BloodDonationFragment: Fragment(R.layout.fragment_blood_donation) {
         buttonSignUp.setOnClickListener {
             loading(true)
             if(time.text.toString()=="2:00"){
-                Constants.showToast("Sorry this appointment is not available",requireContext())
+                Constants.showToast(resources.getString(R.string.sorry_this_appointment_is_not_available),requireContext())
             }else{
-                Constants.showToast("done",requireContext())
+                Constants.showToast(resources.getString(R.string.done),requireContext())
                 requireActivity().onBackPressed()
             }
 

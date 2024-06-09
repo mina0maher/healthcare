@@ -97,7 +97,8 @@
                 android:paddingStart="@dimen/_16sdp"
                 android:paddingEnd="@dimen/_16sdp"
                 android:textColor="@color/primary_text"
-                android:textSize="@dimen/_13ssp" />
+                android:textSize="@dimen/_13ssp"
+                />
 
             <EditText
                 android:id="@+id/inputConfirmPassword"
@@ -119,20 +120,24 @@
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="bold"
-                android:text="are you ?"
+                android:text="@string/are_you"
                 android:layout_margin="@dimen/_5sdp"
                 />
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layoutDirection="ltr"
+                android:textAlignment="textStart"
+                android:layout_gravity="start">
                 <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/radioClient"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:textColor="@android:color/white"
-                    android:text="CLIENT"
+                    android:text="@string/client"
                     android:gravity="center"
+                    android:layout_gravity="end"
                     android:button="@android:color/transparent"
                     android:layout_weight="1"
                     android:checked="true"
@@ -141,8 +146,9 @@
                     android:id="@+id/radioDoctor"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
+                    android:layout_gravity="start"
                     android:textColor="@color/primary_light"
-                    android:text="DOCTOR"
+                    android:text="@string/doctor"
                     android:gravity="center"
                     android:button="@android:color/transparent"
                     android:layout_weight="1"
