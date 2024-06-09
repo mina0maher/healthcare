@@ -62,4 +62,10 @@
     <string name="are_you">are you ?</string>
     <string name="doctor">DOCTOR</string>
     <string name="client">CLIENT</string>
+    <string name="choose_time">Choose Time :</string>
+    <string name="continu">Continue</string>
+    <string name="choose_blood_type">Choose Blood Type :</string>
+    <string name="choose_blood_group">Choose blood Group :</string>
+    <string name="choose_clinic">Choose Clinic :</string>
+    <string name="add_image">ADD IMAGE</string>
 </resources>

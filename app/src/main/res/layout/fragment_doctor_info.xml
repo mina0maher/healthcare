@@ -87,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="ADD IMAGE"
+                        android:text="@string/add_image"
                         android:textColor="@color/secondary_text"
                         android:textSize="@dimen/_10ssp"/>
 
@@ -113,7 +113,7 @@
                     android:layout_height="@dimen/_45sdp"
                     android:layout_marginTop="@dimen/_16sdp"
                     android:background="@drawable/background_input"
-                    android:hint="Phone number"
+                    android:hint="@string/enter_phone"
                     android:imeOptions="actionDone"
                     android:importantForAutofill="no"
                     android:inputType="phone"

@@ -61,6 +61,12 @@
     <string name="are_you">هل انت ؟</string>
     <string name="doctor">طبيب</string>
     <string name="client">عميل</string>
+    <string name="choose_time">اختر الوقت :</string>
+    <string name="continu">استمرار</string>
+    <string name="choose_blood_type">اختر نوع الدم :</string>
+    <string name="choose_blood_group">اختر فصيلة الدم</string>
+    <string name="choose_clinic">اختر العيادة:</string>
+    <string name="add_image">اضف صوره</string>
 
 
 </resources>
